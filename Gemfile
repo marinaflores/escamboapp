@@ -115,6 +115,6 @@ end
 
 group :production do
   #mySql Adapter
-  gem 'mysql2', '0.3.18'
+  gem 'mysql2', '~> 0.3.18'
 end
 
