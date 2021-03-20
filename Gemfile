@@ -108,11 +108,13 @@ group :development do
   gem 'capistrano-bundler', '~> 1.2'
   #
   gem 'capistrano-rails', '~> 1.2'
+  #
+  gem 'capistrano-rvm'
 
 end
 
 group :production do
   #mySql Adapter
-  gem 'mysql2'
+  gem 'mysql2', '~> 0.3.18'
 end
 
