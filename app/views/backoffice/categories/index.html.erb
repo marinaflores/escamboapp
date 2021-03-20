@@ -1,0 +1,45 @@
+
+<h1 class="h3 mb-4 text-gray-800">Categorias</h1>
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Listando Categorias
+
+        <%= link_to new_backoffice_category_path, class: "btn btn-success btn-circle pull-right" do %>
+            <i class="fa fa-plus"></i>
+        <% end %>
+
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Descrição</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<% @categories.each do |category| %>
+                        <tr>
+                            <td><%= category.id %></td>
+                            <td><%= category.description %></td>
+                            <td style="width:150px">
+                                <%= link_to edit_backoffice_category_path(category.id), class: "btn btn-primary btn-circle" do %>
+                                    <i class="fa fa-edit"></i>
+                                <% end %>
+
+                            	<button type="button" disabled="disabled" class="btn btn-danger btn-circle"><i class="fa fa-minus"></i></button>
+                            </td>
+                        </tr>
+                	<% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

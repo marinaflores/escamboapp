@@ -1,0 +1,81 @@
+<!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">BackOffice -EscamboApp </div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <%= link_to backoffice_path, class: "nav-link" do %>
+            <i class="fa fa-dashboard fa-fw"></i>
+            <span>Dashboard</span></a>
+        <% end %>
+    </li>
+    <li class="nav-item">
+
+        <%= link_to backoffice_categories_path, class: "nav-link" do %>
+            <i class="fa fa-th-list fa-fw"></i>
+            <span>Categorias</span>
+
+        <% end %>
+    </li>
+    <li class="nav-item">
+
+        <%= link_to backoffice_admins_path, class: "nav-link" do %>
+            <i class="fa fa-users fa-fw"></i>
+            <span>Administradores</span>
+
+        <% end %>
+    </li>
+    <% if Rails.env.development? %>
+        <li class="nav-item">
+
+            <%= link_to backoffice_diagrams_path, class: "nav-link" do %>
+                <i class="fa fa-database fa-fw"></i>
+                <span>Diagrama ER</span>
+
+            <% end %>
+        </li>
+    <% end %>
+</ul>
+<!-- End of Sidebar -->
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+
+<!-- /.navbar-header -->
+
+<ul class="nav navbar-top-links navbar-right">
+
+<li><%= current_admin.email %></li>
+
+<!-- /.dropdown -->
+<li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+    </a>
+    <ul class="dropdown-menu dropdown-user">
+        <li>
+            <%= link_to destroy_admin_session_path, method: :delete do %>
+                <i class="fa fa-sign-out fa-fw"></i>
+                Sair
+            <% end %>
+        </li>
+    </ul>
+    <!-- /.dropdown-user -->
+</li>
+<!-- /.dropdown -->
+</ul>
+<!-- /.navbar-top-links -->
+</nav>
+<!-- End of Topbar -->
+
