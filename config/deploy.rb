@@ -10,7 +10,7 @@ set :repo_url, "https://github.com/marinaflores/escamboapp.git"
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/var/www/escamboapp"
 
-set :branch, "master"
+set :branch, "main"
 
 # Default value for :format is :airbrussh.
 set :format, :airbrussh
