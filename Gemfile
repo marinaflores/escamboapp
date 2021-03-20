@@ -103,11 +103,11 @@ group :development do
   #
   gem 'doctor_ipsum'
   #
-  gem 'capistrano', '~> 3.7'
+  gem 'capistrano', '3.7'
   #
-  gem 'capistrano-bundler', '~> 1.2'
+  gem 'capistrano-bundler', '1.2'
   #
-  gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-rails', '1.2'
   #
   gem 'capistrano-rvm'
 
@@ -115,6 +115,6 @@ end
 
 group :production do
   #mySql Adapter
-  gem 'mysql2', '~> 0.3.18'
+  gem 'mysql2', '0.3.18'
 end
 
